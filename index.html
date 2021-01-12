@@ -11,13 +11,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
   <!-- foglio di stile -->
   <link rel="stylesheet" href="css/app.css">
+  <!-- vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <title>Max Coach</title>
 </head>
 <body>
-  <div class="container">
+  <div id="app" class="container">
     <!-- header -->
     <header>
-      <div class="header-wrap">
+      <div class="header-container">
         <div class="logo">
           <img src="img/dark-logo.png" alt="logo">
         </div>
@@ -41,8 +43,8 @@
     <!-- /header -->
     <!-- main -->
     <main>
-      <div class="wrap-main">
-        <section id="jumbotron">
+      <section id="jumbotron">
+        <div class="jumbotron-container">
           <div class="distant-learning-box">
             <div class="title-box">
               <h1>Distant learning for further expansion</h1>
@@ -59,21 +61,72 @@
             </div>
           </div>
           <div class="images-box">
-            <div class="element-img-background">
-              <img src="img/maxcoach-shape-08.png" alt="">
-              <img src="img/maxcoach-shape-08.png" alt="">
+            <div class="elementor-image">
+              <img src="img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" alt="">
             </div>
-            <div class="element-img-background">
-              <img src="img/maxcoach-shape-07.png" alt="">
+            <div class="images-box-dots">
+              <div class="images-background-dots-1">
+                <img src="img/maxcoach-shape-08.png" alt="">
+                <img src="img/maxcoach-shape-08.png" alt="">
+              </div>
+              <div class="images-background-dots-2">
+                <img src="img/maxcoach-shape-07.png" alt="">
+              </div>
+            </div>
+            <div class="images-box-circle">
+              <div class="images-background-circle-1">
+                <img src="img/maxcoach-shape-02.png" alt="">
+              </div>
+              <div class="images-background-circle-2">
+                <i class="far fa-circle"></i>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section id="logos">
+        <div class="container-logos">
+          <div v-for="logo in logos" class="logo">
+            <img  :src="logo" :alt="logo">
+          </div>
+        </div>
+      </section>
+      <section id="online-courses">
+        <div class="container-online-courses">
+          <div class="title-online">
+            <p>STIMULATED TO LEARN?</p>
+            <h2>Featured Online Courses</h2>
+          </div>
+          <div class="courses-content">
+            <div v-for="course in courses" class="course-box">
+              <div class="img-course">
+                <img :src="course.img" alt="">
+              </div>
+              <div class="info-course">
+                <h5>{{ course.price }}</h5>
+                <h4>{{ course.course }}</h4>
+                <p>
+                  <i class="far fa-file-alt"></i>
+                  {{ course.lessons }}
+                </p>
+                <p>
+                  <i class="far fa-user"></i>
+                  {{ course.students }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="btn-view-courses">
+            <button class="btn-green" type="button" name="button">View all courses <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- /main -->
     <!-- footer -->
     <footer></footer>
     <!-- /footer -->
   </div>
+<script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>

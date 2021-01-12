@@ -41,14 +41,21 @@ span {
   font-size: 16px;
   background-color: #20ad97;
   color: #FFFF;
+  transition-duration: 0.6s;
+}
+.btn-green:hover {
+  background-color: #3F3A64;
 }
 
 header {
+  position: fixed;
+  width: 100%;
   height: 80px;
   background-color: #FFFF;
   box-shadow: 0 0px 13px 13px rgba(0, 0, 0, 0.1);
+  z-index: 4;
 }
-header .header-wrap {
+header .header-container {
   width: 1200px;
   margin: auto;
   display: flex;
@@ -57,53 +64,53 @@ header .header-wrap {
   height: 100%;
   padding: 0 15px;
 }
-header .header-wrap .logo {
+header .header-container .logo {
   display: flex;
   align-items: center;
   width: 290px;
   height: 100%;
 }
-header .header-wrap .logo img {
+header .header-container .logo img {
   width: 160px;
 }
-header .header-wrap #menu-nav ul {
+header .header-container #menu-nav ul {
   list-style: none;
 }
-header .header-wrap #menu-nav ul li {
+header .header-container #menu-nav ul li {
   display: inline-block;
 }
-header .header-wrap #menu-nav ul li a {
+header .header-container #menu-nav ul li a {
   text-decoration: none;
 }
-header .header-wrap #menu-nav ul li a:hover {
+header .header-container #menu-nav ul li a:hover {
   color: #20ad97;
 }
-header .header-wrap #menu-nav ul li:hover {
+header .header-container #menu-nav ul li:hover {
   color: #20ad97;
 }
-header .header-wrap #menu-nav ul {
+header .header-container #menu-nav ul {
   height: 100%;
 }
-header .header-wrap #menu-nav ul li {
+header .header-container #menu-nav ul li {
   padding: 0 18px;
 }
-header .header-wrap #menu-nav ul li a {
+header .header-container #menu-nav ul li a {
   color: black;
 }
-header .header-wrap #menu-nav ul li a i {
+header .header-container #menu-nav ul li a i {
   font-size: 9px;
   margin-left: 2px;
 }
-header .header-wrap #menu-nav ul li a:hover {
+header .header-container #menu-nav ul li a:hover {
   text-decoration: underline;
 }
-header .header-wrap .header-search {
+header .header-container .header-search {
   width: 230px;
   height: 50px;
   border-radius: 3px;
   background-color: #F8F8F8;
 }
-header .header-wrap .header-search input {
+header .header-container .header-search input {
   width: 180px;
   height: 100%;
   padding: 15px;
@@ -111,69 +118,229 @@ header .header-wrap .header-search input {
   border-radius: 6px 0 0 6px;
   background-color: #F8F8F8;
 }
-header .header-wrap .header-search button {
+header .header-container .header-search button {
   width: 45px;
   height: 100%;
   border: 0;
   border-radius: 0 6px 6px 0;
   background-color: #F8F8F8;
-  transition-duration: 0.3s;
+  transition-duration: 0.6s;
 }
-header .header-wrap .header-search button i {
+header .header-container .header-search button i {
   color: #20ad97;
 }
-header .header-wrap .header-search button:hover {
+header .header-container .header-search button:hover {
   background-color: #20ad97;
 }
-header .header-wrap .header-search button:hover i {
+header .header-container .header-search button:hover i {
   color: #FFFF;
 }
 
 #jumbotron {
+  background-color: #FFFF;
+}
+#jumbotron .jumbotron-container {
+  width: 1200px;
+  margin: auto;
+  padding-top: 80px;
+}
+#jumbotron .jumbotron-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#jumbotron .jumbotron-container .distant-learning-box {
+  float: left;
+  width: 50%;
+  padding-right: 140px;
+}
+#jumbotron .jumbotron-container .distant-learning-box .title-box {
+  margin-top: 180px;
+}
+#jumbotron .jumbotron-container .distant-learning-box .title-box h1 {
+  font-size: 48px;
+  padding-bottom: 16px;
+}
+#jumbotron .jumbotron-container .distant-learning-box .title-box p {
+  font-size: 18px;
+  line-height: 34px;
+}
+#jumbotron .jumbotron-container .distant-learning-box .download-box {
+  margin-top: 30px;
+}
+#jumbotron .jumbotron-container .distant-learning-box .download-box button {
+  margin-bottom: 20px;
+}
+#jumbotron .jumbotron-container .distant-learning-box .download-box a {
+  color: #8C89A2;
+}
+#jumbotron .jumbotron-container .distant-learning-box .download-box a span {
+  font-weight: 500;
+  text-decoration: underline;
+}
+#jumbotron .jumbotron-container .distant-learning-box .download-box a span i {
+  color: #20ad97;
+}
+#jumbotron .jumbotron-container .images-box {
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 650px;
+}
+#jumbotron .jumbotron-container .images-box .elementor-image {
+  position: absolute;
+  padding-top: 50px;
+  z-index: 2;
+}
+#jumbotron .jumbotron-container .images-box .elementor-image img {
+  border-radius: 50%;
+}
+#jumbotron .jumbotron-container .images-box .images-box-dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#jumbotron .jumbotron-container .images-box .images-box-dots .images-background-dots-1 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 140px;
+  z-index: 1;
+  top: 200px;
+  left: -100px;
+}
+#jumbotron .jumbotron-container .images-box .images-box-dots .images-background-dots-1 img {
+  width: 100%;
+}
+#jumbotron .jumbotron-container .images-box .images-box-dots .images-background-dots-1 img {
+  margin: 10px 0;
+}
+#jumbotron .jumbotron-container .images-box .images-box-dots .images-background-dots-2 {
+  position: absolute;
+  width: 140px;
+  z-index: 1;
+  right: 55px;
+  bottom: 40px;
+}
+#jumbotron .jumbotron-container .images-box .images-box-dots .images-background-dots-2 img {
+  width: 100%;
+}
+#jumbotron .jumbotron-container .images-box .images-box-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#jumbotron .jumbotron-container .images-box .images-box-circle .images-background-circle-1 {
+  position: absolute;
+  width: 140px;
+  z-index: 1;
+  right: -70px;
+  top: 100px;
+  z-index: 2;
+}
+#jumbotron .jumbotron-container .images-box .images-box-circle .images-background-circle-1 img {
+  width: 100%;
+}
+#jumbotron .jumbotron-container .images-box .images-box-circle .images-background-circle-2 {
+  position: absolute;
+  width: 140px;
+  z-index: 1;
+  left: -30px;
+  bottom: 150px;
+  z-index: 2;
+}
+#jumbotron .jumbotron-container .images-box .images-box-circle .images-background-circle-2 img {
+  width: 100%;
+}
+#jumbotron .jumbotron-container .images-box .images-box-circle .images-background-circle-2 i {
+  color: #713E30;
+  font-size: 60px;
+}
+
+#logos {
+  background-color: #FFFF;
+}
+#logos .container-logos {
   width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
 }
-#jumbotron .distant-learning-box {
+
+#online-courses {
+  background-color: #F5F7FA;
+}
+#online-courses .container-online-courses {
+  width: 1200px;
+  margin: auto;
+}
+#online-courses .container-online-courses .title-online {
+  padding: 100px 0 50px 0;
+  text-align: center;
+}
+#online-courses .container-online-courses .title-online h2 {
+  padding: 20px;
+  font-size: 34px;
+}
+#online-courses .container-online-courses .courses-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#online-courses .container-online-courses .courses-content .course-box {
+  display: flex;
+  align-items: center;
   width: 50%;
-  padding-right: 140px;
+  padding: 20px;
+  margin-bottom: 25px;
+  transition-duration: 0.6s;
 }
-#jumbotron .distant-learning-box .title-box {
-  margin-top: 180px;
+#online-courses .container-online-courses .courses-content .course-box .img-course {
+  width: 170px;
+  margin-right: 30px;
 }
-#jumbotron .distant-learning-box .title-box h1 {
-  font-size: 48px;
-  padding-bottom: 16px;
+#online-courses .container-online-courses .courses-content .course-box .img-course img {
+  height: 170px;
+  clip: rect(170px, 170px);
+  border-radius: 50%;
+  cursor: pointer;
 }
-#jumbotron .distant-learning-box .title-box p {
-  font-size: 18px;
-  line-height: 34px;
+#online-courses .container-online-courses .courses-content .course-box .info-course {
+  padding-right: 40px;
 }
-#jumbotron .distant-learning-box .download-box {
-  margin-top: 30px;
-}
-#jumbotron .distant-learning-box .download-box button {
-  margin-bottom: 20px;
-}
-#jumbotron .distant-learning-box .download-box a {
-  color: #8C89A2;
-}
-#jumbotron .distant-learning-box .download-box a span {
-  font-weight: 500;
-  text-decoration: underline;
-}
-#jumbotron .distant-learning-box .download-box a span i {
+#online-courses .container-online-courses .courses-content .course-box .info-course h5 {
+  padding: 10px 0;
+  font-weight: bolder;
+  font-size: 23px;
   color: #20ad97;
 }
-#jumbotron .images-box {
-  position: relative;
-  width: 50%;
+#online-courses .container-online-courses .courses-content .course-box .info-course h4 {
+  font-size: 20px;
+  line-height: 1.6;
+  padding-bottom: 10px;
+  cursor: pointer;
 }
-#jumbotron .images-box .element-img-background {
-  width: 140px;
+#online-courses .container-online-courses .courses-content .course-box .info-course h4:hover {
+  color: #20ad97;
+  transition-duration: 0.6s;
 }
-#jumbotron .images-box .element-img-background img {
-  width: 100%;
-  margin: 5px 0;
+#online-courses .container-online-courses .courses-content .course-box .info-course p {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 13px;
+  color: #8C89A2;
+}
+#online-courses .container-online-courses .courses-content .course-box .info-course p i {
+  cursor: context-menu;
+}
+#online-courses .container-online-courses .courses-content .course-box:hover {
+  background-color: #FFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 13px 2px rgba(0, 0, 0, 0.2);
+}
+#online-courses .container-online-courses .btn-view-courses {
+  padding: 15px 0 120px 0;
+  text-align: center;
 }

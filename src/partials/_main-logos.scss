@@ -1,0 +1,9 @@
+#logos {
+  background-color: $colorWhite;
+  .container-logos {
+    @include wrap;
+    @include display-flex-row;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+}
