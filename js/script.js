@@ -73,6 +73,74 @@ var app = new Vue({
         description: 'We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.',
         link: 'Start now'
       }
+    ],
+    testimonials: [
+      {
+        name: 'Florence Themes',
+        position: '/ Multimedia Admin',
+        title: "It's a choice of quality for people with special needs",
+        review: "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.",
+        image: 'img/testimonial-avata-03.jpg'
+      },
+      {
+        name: 'Mina Hollace',
+        position: '/ Freelancer',
+        title: 'High level of efficiency and scientific teaching methods',
+        review: 'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.',
+        image: 'img/testimonial-avata-02.jpg'
+      },
+      {
+        name: 'Madley Pondor',
+        position: '/ IT Specialist',
+        title: 'Professional team of specialists and passionate mentors at reach',
+        review: 'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
+        image: 'img/testimonial-avata-04.jpg'
+      }
+    ],
+    dataBase: [
+      {
+      title: 'Successfully trained',
+      number: '1790',
+      info: 'ENROLLED LEARNERS'
+      },
+      {
+      title: 'Proudly Received',
+      number: '19',
+      info: 'COUNTRYWIDE AWARDS'
+      },
+      {
+      title: 'Firmly Established',
+      number: '24',
+      info: 'LOCAL BRANCHES'
+      },
+      {
+      title: 'Getting Featured on',
+      number: '1090',
+      info: 'BLOG POSTS'
+      },
+    ],
+    linkBlogs: [
+      'Become a Better Blogger: Content Planning',
+      'Promoting Your Online Business on Pinterest',
+      'Gamification and Game-Based Learning',
+      'Designing an Online Course from Expert’s Perspective',
+      'Why Online Courses Are the Future of Education'
+    ],
+    blogs: [
+      {
+        category: 'ARTIST',
+        postTitle: 'Brush Strokes Energize Trees in Paintings',
+        postDate: 'May 15, 2020',
+        postView: '688 views',
+        cover: 'artist-blog-03-480x352.jpeg'
+      },
+      {
+        category: 'ARTIST',
+        postTitle: 'Pocket-Sized Notebooks Hold Minature Paintings',
+        postDate: 'May 15, 2020',
+        postView: '603 views',
+        cover: 'artist-blog-01-480x352.jpg'
+      }
     ]
   }
 })

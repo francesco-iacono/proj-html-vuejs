@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
   <!-- foglio di stile -->
@@ -43,8 +43,9 @@
     <!-- /header -->
     <!-- main -->
     <main>
+      <!-- jumbotron -->
       <section id="jumbotron">
-        <div class="jumbotron-container">
+        <div class="container-section">
           <div class="distant-learning-box">
             <div class="title-box">
               <h1>Distant learning for further expansion</h1>
@@ -58,7 +59,10 @@
               <p>
                 <a href="#">
                   Have questions?
-                  <span>Get Free Sample <i class="fas fa-arrow-right"></i></span>
+                  <span>
+                    Get Free Sample
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
                 </a>
               </p>
             </div>
@@ -87,17 +91,21 @@
           </div>
         </div>
       </section>
+      <!-- /jumbotron -->
+      <!-- loghi -->
       <section id="logos">
-        <div class="container-logos">
+        <div class="container-section">
           <div v-for="logo in logos" class="logo">
             <img  :src="logo" :alt="logo">
           </div>
         </div>
       </section>
+      <!-- /loghi -->
+      <!-- corsi online -->
       <section id="online-courses">
-        <div class="container-online-courses">
-          <div class="title-online">
-            <p>STIMULATED TO LEARN?</p>
+        <div class="container-section">
+          <div class="title-section">
+            <h5>STIMULATED TO LEARN?</h5>
             <h2>Featured Online Courses</h2>
           </div>
           <div class="courses-content">
@@ -124,11 +132,13 @@
           </div>
         </div>
       </section>
+      <!-- /corsi online -->
+      <!-- tutorial smart -->
       <section id="smart-tutoring">
-        <div class="container-smart-tutoring">
-          <div class="title-tutoring">
-            <p>MAXCOACH AVAILABLE COURSES</p>
-            <h2>Access Smart Tutoring Program For Benefits.</h2>
+        <div class="container-section">
+          <div class="title-section">
+            <h5>MAXCOACH AVAILABLE COURSES</h5>
+            <h2>Access <span>Smart Tutoring</span> Program For Benefits.</h2>
           </div>
           <div v-for="tutoring in tutorings" class="tutoring-box">
             <div class="img-tutoring">
@@ -144,11 +154,136 @@
             </div>
           </div>
           <div class="companionship">
-            <div class="companionship-video-area"></div>
-            <div class="companionship-title"></div>
+            <div class="companionship-video-area">
+              <div class="images-box">
+                <div class="elementor-image">
+                  <div class="video-play">
+                    <img src="img/home-2-popup-video-poster.jpg" alt="video-poster">
+                    <div class="icon-youtube-play">
+                      <img src="img/icon-youtube-play.png" alt="icon-youtube">
+                    </div>
+                  </div>
+                </div>
+                <div class="images-box-dots">
+                  <div class="images-background-dots-1">
+                    <img src="img/maxcoach-shape-05-150x150.png" alt="images-background-dots-1">
+                  </div>
+                  <div class="images-background-dots-2">
+                    <img src="img/maxcoach-shape-07.png" alt="maxcoach-shape-07">
+                  </div>
+                </div>
+                <div class="images-box-circle">
+                  <div class="images-background-circle-1">
+                    <i class="far fa-circle"></i>
+                  </div>
+                  <div class="images-background-circle-2">
+                    <img src="img/img-cir.png" alt="img-cir">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title-box">
+              <h5>GET STARTED <span>EFFORTLESSLY</span></h5>
+              <h1>Enjoy Our <span>Companionship</span></h1>
+              <p>Sneek peek into what has in store for you on our online teaching and mentoring portal. Seek for some hidden hints of early-bird rewards as well.</p>
+              <a href="#">
+                Download free guidebook
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
 
+      </section>
+      <!-- /tutorial smart -->
+      <!-- recensioni -->
+      <section id="top-learners">
+        <div class="title-section">
+          <h5>GREAT WORDS ABOUT MAXCOACH</h5>
+          <h2>Our <span>top learners'</span> verbatim</h2>
+        </div>
+        <div class="row-testimonials">
+          <div v-for="testimonial in testimonials" class="card-testimonial">
+            <div class="review">
+              <h4>{{ testimonial.title }}</h4>
+              <p>{{ testimonial.review }}</p>
+            </div>
+            <div class="info-student">
+              <div class="photo">
+                <img :src="testimonial.image" alt="">
+              </div>
+              <div class="name-position">
+                <h6>{{ testimonial.name }}</h6>
+                <span>{{ testimonial.position }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="slider">
+            <i v-for="n in testimonials" class="fas fa-circle"></i>
+          </div>
+        </div>
+        <div class="certification">
+          <div class="bck-box">
+            <div class="images-box-circle">
+              <div class="images-background-circle-1">
+                <i class="far fa-circle"></i>
+              </div>
+              <div class="images-background-circle-2">
+                <img src="img/maxcoach-shape-01.png" alt="img-cir">
+              </div>
+            </div>
+          </div>
+          <div class="title-section">
+            <h4>Start today for getting <span>Online Certification</span></h4>
+            <h2>You can be your own guiding star with our help!</h2>
+            <button class="btn-green" type="button" name="button">Get started now</button>
+          </div>
+          <div class="bck-box">
+            <div class="images-box-circle">
+              <div class="images-background-circle-3">
+                <img src="img/maxcoach-shape-02.png" alt="img-cir">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/ recensioni -->
+      <!-- database -->
+      <section id="database">
+        <div class="container-section">
+          <div class="database-row">
+            <div v-for="data in dataBase" class="database-box">
+              <h4>{{ data.title }}</h4>
+              <div class="number">
+                {{ data.number }}
+              </div>
+              <h5>{{ data.info }}</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /database -->
+      <section id="best-blogs">
+        <div class="container-section">
+          <div class="link-blogs">
+            <div class="title-section">
+              <h5>ENJOYABLE INSIGHTS</h5>
+              <h2>Most Viewed <span>Best Blogs</span></h2>
+            </div>
+            <div class="blogs-list">
+              <ul>
+                <li v-for="link in linkBlogs"><a href="#">
+                  <i class="fas fa-arrow-right"></i>
+                  {{ link }}
+                </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="blogs-box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
       </section>
     </main>
     <!-- /main -->

@@ -1,7 +1,14 @@
+// widit wrap 1200px
 @mixin wrap {
   width: 1200px;
   margin: auto;
 }
+// altezza e larghezza 100%
+@mixin widthHeight100 {
+  width: 100%;
+  height: 100%;
+}
+// clearfix
 @mixin clearfix {
    &::after {
     content: "";
@@ -9,14 +16,17 @@
     display: table;
   }
 }
+// dsiplay flex in riga
 @mixin display-flex-row {
   display: flex;
   align-items: center;
 }
+// dsiplay flex in colonna
 @mixin display-flex-column {
   display: flex;
   flex-direction: column;
 }
+// liste inline
 @mixin inline-list {
   ul {
     list-style: none;
@@ -34,16 +44,24 @@
     }
   }
 }
+// transition-duration di tutti gli hover
 @mixin transition-change {
   transition-duration: 0.6s;
 }
+// button
 @mixin btn {
   width: 250px;
   height: 50px;
   border-radius: 6px;
   border: 0;
 }
-@mixin imagesBackground {
+// immagini background puntini e cerchi
+@mixin containerBackgroundDotsCircle {
+  position: relative;
+  width: 50%;
+  height: 650px;
+}
+@mixin imagesBackgroundDots {
   position: absolute;
   width: 140px;
   z-index: 1;
@@ -51,6 +69,18 @@
     width: 100%;
   }
 }
+@mixin imagesBackgroundCircle {
+  position: absolute;
+  width: 140px;
+  z-index: 2;
+  img {
+    width: 100%;
+  }
+  i {
+    color: #E5C791;
+  }
+}
+// title inizio section h2
 @mixin titleSection {
   padding: 100px 0 50px 0;
   text-align: center;
@@ -59,11 +89,24 @@
     font-size: 34px;
   }
 }
+// BOX e CARD
+// informazioni box title h4
 @mixin infoBoxH4 {
   font-size: 20px;
   line-height: 1.6;
   padding-bottom: 10px;
+  font-weight: bolder;
 }
-@mixin link {
-  font-weight: 600;
+@mixin infoBoxP {
+  line-height: 25px;
+  padding-bottom: 10px;
+}
+// link a
+@mixin linkGreen {
+  font-weight: 700;
+  color: $colorGreen;
+}
+@mixin linkColorText {
+  font-weight: 700;
+  color: $colorText;
 }

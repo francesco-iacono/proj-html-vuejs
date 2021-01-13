@@ -1,10 +1,6 @@
 #online-courses {
   background-color: #F5F7FA;
-  .container-online-courses {
-    @include wrap;
-    .title-online {
-      @include titleSection;
-    }
+  .container-section {
     .courses-content {
       @include display-flex-row;
       flex-wrap: wrap;

@@ -1,0 +1,29 @@
+#best-blogs {
+  background-color: $colorBeige;
+  .container-section {
+    @include display-flex-row;
+    .link-blogs {
+      width: 430px;
+      .title-section {
+        text-align: left;
+        padding: 160px 0 30px 0;
+        h2 {
+          padding: 20px 0;
+        }
+      }
+      .blogs-list {
+        ul {
+          list-style: none;
+          li {
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .blogs-box {
+      width: calc(100% - 430px);
+    }
+  }
+}

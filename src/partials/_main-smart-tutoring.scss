@@ -1,10 +1,6 @@
 #smart-tutoring {
   background-color: $colorWhite;
-  .container-smart-tutoring {
-    @include wrap;
-    .title-tutoring {
-      @include titleSection;
-    }
+  .container-section {
     .tutoring-box {
       display: inline-block;
       width: calc(100% / 3);
@@ -22,12 +18,10 @@
           @include infoBoxH4;
         }
         p {
-          line-height: 25px;
-          padding-bottom: 10px;
+          @include infoBoxP;
         }
         a {
-          @include link;
-          color: $colorText;
+          @include linkColorText;
           i {
             font-size: 10px;
           }
@@ -35,12 +29,75 @@
       }
     }
     .companionship {
+      display: flex;
       width: 100%;
+      padding-top: 100px;
       .companionship-video-area {
-        width: 50%;
+        @include containerBackgroundDotsCircle;
+        width: 670px;
+        .images-box {
+          @include widthHeight100;
+          .elementor-image {
+            z-index: 3;
+            .video-play {
+              position: relative;
+              @include widthHeight100;
+              img {
+                border-radius: 5px;
+              }
+              .icon-youtube-play {
+                position: absolute;
+                @include widthHeight100;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+          }
+          .images-box-dots {
+            .images-background-dots-1 {
+              z-index: 2;
+              top: 100px;
+              left: -80px;
+            }
+            .images-background-dots-2 {
+              right: -15px;
+              bottom: 60px;
+            }
+          }
+          .images-box-circle {
+            .images-background-circle-1 {
+              right: -180px;
+              top: 13px;
+              i {
+                font-size: 80px;
+              }
+            }
+            .images-background-circle-2 {
+              left: -60px;
+              top: -20px;
+              z-index: 1;
+            }
+          }
+        }
       }
-      .companionship-title {
-        width: 50%;
+      .title-box {
+        width: calc(100% - 670px);
+        padding: 120px 70px;
+        h5 {
+          padding-bottom: 20px;
+          span {
+            color: $colorGun;
+            font-weight: 500;
+          }
+        }
+        p {
+          margin-bottom: 80px;
+        }
+        a {
+          @include linkGreen;
+        }
       }
     }
   }
