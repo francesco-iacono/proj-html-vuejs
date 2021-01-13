@@ -1,0 +1,47 @@
+#smart-tutoring {
+  background-color: $colorWhite;
+  .container-smart-tutoring {
+    @include wrap;
+    .title-tutoring {
+      @include titleSection;
+    }
+    .tutoring-box {
+      display: inline-block;
+      width: calc(100% / 3);
+      padding: 30px;
+      cursor: pointer;
+      .img-tutoring {
+        width: 100%;
+        img {
+          width: 170px;
+        }
+      }
+      .info-tutoring {
+        width: 100%;
+        h4 {
+          @include infoBoxH4;
+        }
+        p {
+          line-height: 25px;
+          padding-bottom: 10px;
+        }
+        a {
+          @include link;
+          color: $colorText;
+          i {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    .companionship {
+      width: 100%;
+      .companionship-video-area {
+        width: 50%;
+      }
+      .companionship-title {
+        width: 50%;
+      }
+    }
+  }
+}

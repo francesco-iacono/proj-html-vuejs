@@ -27,7 +27,7 @@
         a {
           color: $colorText;
           span {
-            font-weight: 500;
+            @include link;
             text-decoration: underline;
             i {
               color: $colorGreen;
@@ -84,7 +84,7 @@
           bottom: 150px;
           z-index: 2;
           i {
-            color: #713E30;
+            color: #E5C791;
             font-size: 60px;
           }
         }

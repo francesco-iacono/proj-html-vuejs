@@ -55,9 +55,12 @@
                 <i class="fas fa-download"></i>
                 Download free guide
               </button>
-              <p> <a href="#">
-                Have questions? <span>Get Free Sample <i class="fas fa-arrow-right"></i></span>
-              </a> </p>
+              <p>
+                <a href="#">
+                  Have questions?
+                  <span>Get Free Sample <i class="fas fa-arrow-right"></i></span>
+                </a>
+              </p>
             </div>
           </div>
           <div class="images-box">
@@ -120,6 +123,32 @@
             <button class="btn-green" type="button" name="button">View all courses <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
+      </section>
+      <section id="smart-tutoring">
+        <div class="container-smart-tutoring">
+          <div class="title-tutoring">
+            <p>MAXCOACH AVAILABLE COURSES</p>
+            <h2>Access Smart Tutoring Program For Benefits.</h2>
+          </div>
+          <div v-for="tutoring in tutorings" class="tutoring-box">
+            <div class="img-tutoring">
+              <img :src="tutoring.img" :alt="tutoring.img">
+            </div>
+            <div class="info-tutoring">
+              <h4>{{ tutoring.name }}</h4>
+              <p>{{ tutoring.description }}</p>
+              <a href="#">
+                {{ tutoring.link }}
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="companionship">
+            <div class="companionship-video-area"></div>
+            <div class="companionship-title"></div>
+          </div>
+        </div>
+
       </section>
     </main>
     <!-- /main -->

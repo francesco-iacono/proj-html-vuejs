@@ -175,7 +175,7 @@ header .header-container .header-search button:hover i {
   color: #8C89A2;
 }
 #jumbotron .jumbotron-container .distant-learning-box .download-box a span {
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: underline;
 }
 #jumbotron .jumbotron-container .distant-learning-box .download-box a span i {
@@ -253,7 +253,7 @@ header .header-container .header-search button:hover i {
   width: 100%;
 }
 #jumbotron .jumbotron-container .images-box .images-box-circle .images-background-circle-2 i {
-  color: #713E30;
+  color: #E5C791;
   font-size: 60px;
 }
 
@@ -303,7 +303,6 @@ header .header-container .header-search button:hover i {
 }
 #online-courses .container-online-courses .courses-content .course-box .img-course img {
   height: 170px;
-  clip: rect(170px, 170px);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -343,4 +342,60 @@ header .header-container .header-search button:hover i {
 #online-courses .container-online-courses .btn-view-courses {
   padding: 15px 0 120px 0;
   text-align: center;
+}
+
+#smart-tutoring {
+  background-color: #FFFF;
+}
+#smart-tutoring .container-smart-tutoring {
+  width: 1200px;
+  margin: auto;
+}
+#smart-tutoring .container-smart-tutoring .title-tutoring {
+  padding: 100px 0 50px 0;
+  text-align: center;
+}
+#smart-tutoring .container-smart-tutoring .title-tutoring h2 {
+  padding: 20px;
+  font-size: 34px;
+}
+#smart-tutoring .container-smart-tutoring .tutoring-box {
+  display: inline-block;
+  width: calc(100% / 3);
+  padding: 30px;
+  cursor: pointer;
+}
+#smart-tutoring .container-smart-tutoring .tutoring-box .img-tutoring {
+  width: 100%;
+}
+#smart-tutoring .container-smart-tutoring .tutoring-box .img-tutoring img {
+  width: 170px;
+}
+#smart-tutoring .container-smart-tutoring .tutoring-box .info-tutoring {
+  width: 100%;
+}
+#smart-tutoring .container-smart-tutoring .tutoring-box .info-tutoring h4 {
+  font-size: 20px;
+  line-height: 1.6;
+  padding-bottom: 10px;
+}
+#smart-tutoring .container-smart-tutoring .tutoring-box .info-tutoring p {
+  line-height: 25px;
+  padding-bottom: 10px;
+}
+#smart-tutoring .container-smart-tutoring .tutoring-box .info-tutoring a {
+  font-weight: 600;
+  color: #8C89A2;
+}
+#smart-tutoring .container-smart-tutoring .tutoring-box .info-tutoring a i {
+  font-size: 10px;
+}
+#smart-tutoring .container-smart-tutoring .companionship {
+  width: 100%;
+}
+#smart-tutoring .container-smart-tutoring .companionship .companionship-video-area {
+  width: 50%;
+}
+#smart-tutoring .container-smart-tutoring .companionship .companionship-title {
+  width: 50%;
 }
