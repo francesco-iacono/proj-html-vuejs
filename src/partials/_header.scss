@@ -13,18 +13,20 @@ header {
     padding: 0 15px;
     .logo {
       @include display-flex-row;
-      width: 290px;
+      width: 250px;
       height: 100%;
       img {
         width: 160px;
       }
     }
     #menu-nav {
+      position: relative;
+      height: 100%;
       @include inline-list;
       ul {
-        height: 100%;
         li {
           padding: 0 18px;
+          line-height: 80px;
           a {
             color: black;
             i {
@@ -33,6 +35,19 @@ header {
             }
             &:hover {
               text-decoration: underline;
+            }
+          }
+          ul {
+            // @include display-flex-column;
+            display: none;
+            position: absolute;
+            width: 240px;
+            background-color: $colorWhite;
+            li {
+              line-height: 30px;
+              a {
+                color: $colorText;
+              }
             }
           }
         }

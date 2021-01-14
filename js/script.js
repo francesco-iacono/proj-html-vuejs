@@ -1,6 +1,70 @@
 var app = new Vue({
   el: '#app',
   data: {
+    linkMenu: [
+      {
+        menuItem: 'Home',
+        subMenu: [
+          'MaxCoach Education',
+        ]
+      },
+      {
+        menuItem: 'Pages',
+        subMenu: [
+          'Start Here',
+          'Success Story',
+          'About me',
+          'About us 01',
+          'About us 02',
+          'About us 03',
+          'Contact me',
+          'Contact us',
+          'Purchase Guide',
+          'Privacy Policy',
+          'Terms of Service'
+        ]
+      },
+      {
+        menuItem: 'Courses',
+        subMenu: [
+          'Courses Grid 01',
+          'Courses Grid 02',
+          'Courses Grid 03',
+          'Membership Levels',
+          'Become a Teacher',
+          'Profile',
+          'Checkout',
+          'Single Layout'
+        ]
+      },
+      {
+        menuItem: 'Features',
+        subMenu: [
+          'Events',
+          'Zoom Meetings'
+        ]
+      },
+      {
+        menuItem: 'Blog Grid',
+        subMenu: [
+          'Blog Grid',
+          'Blog Masonry',
+          'Blog Classic',
+          'Blog List'
+        ]
+      },
+      {
+        menuItem: 'Shop',
+        subMenu: [
+          'Shop Left Sidebar',
+          'Shop Right Sidebar',
+          'Cart',
+          'Single Product'
+        ]
+      },
+
+    ],
+    openMenu:false,
     logos: [
       'img/client-logo-01.png',
       'img/client-logo-02.png',

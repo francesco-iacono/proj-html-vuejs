@@ -25,12 +25,19 @@
         </div>
         <div id="menu-nav">
           <ul>
-            <li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Pages<i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Courses<i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Features<i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Blog<i class="fas fa-chevron-down"></i></a></li>
-            <li><a href="#">Shop<i class="fas fa-chevron-down"></i></a></li>
+            <li v-for="item in linkMenu">
+              <a href="#">
+                {{ item.menuItem }}
+                <i class="fas fa-chevron-down"></i>
+              </a>
+              <ul>
+                <li v-for="element in item.subMenu">
+                  <a href="#">
+                    {{ element }}
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li><i class="far fa-user-circle"></i></li>
           </ul>
         </div>

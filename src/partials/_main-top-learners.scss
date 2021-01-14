@@ -9,6 +9,9 @@
       margin: 0 25px;
       border-radius: $borderBox5px;
       background-color: $colorWhite;
+      &:nth-child(2n+1) {
+        opacity: 0.5;
+      }
       .review {
         height: 250px;
         padding-bottom: 20px;
@@ -44,6 +47,20 @@
     .slider {
       margin-top: 40px;
       text-align: center;
+      i {
+        padding: 12px;
+        font-size: 10px;
+        color: #7e7e7e;
+        cursor: pointer;
+        &:hover {
+          color: $colorGun;
+          transform: scale(1.5);
+        }
+        &:first-child {
+          color: $colorGun;
+          transform: scale(1.5);
+        }
+      }
     }
   }
   .certification {

@@ -6,6 +6,10 @@
   font-weight: 600;
 }
 
+body {
+  background-color: #F8F8F8;
+}
+
 :focus {
   outline: none;
 }
@@ -169,11 +173,15 @@ header .header-container {
 header .header-container .logo {
   display: flex;
   align-items: center;
-  width: 290px;
+  width: 250px;
   height: 100%;
 }
 header .header-container .logo img {
   width: 160px;
+}
+header .header-container #menu-nav {
+  position: relative;
+  height: 100%;
 }
 header .header-container #menu-nav ul {
   list-style: none;
@@ -190,11 +198,9 @@ header .header-container #menu-nav ul li a:hover {
 header .header-container #menu-nav ul li:hover {
   color: #20ad97;
 }
-header .header-container #menu-nav ul {
-  height: 100%;
-}
 header .header-container #menu-nav ul li {
   padding: 0 18px;
+  line-height: 80px;
 }
 header .header-container #menu-nav ul li a {
   color: black;
@@ -205,6 +211,18 @@ header .header-container #menu-nav ul li a i {
 }
 header .header-container #menu-nav ul li a:hover {
   text-decoration: underline;
+}
+header .header-container #menu-nav ul li ul {
+  display: none;
+  position: absolute;
+  width: 240px;
+  background-color: #FFFF;
+}
+header .header-container #menu-nav ul li ul li {
+  line-height: 30px;
+}
+header .header-container #menu-nav ul li ul li a {
+  color: #696969;
 }
 header .header-container .input-button {
   width: 230px;
@@ -373,6 +391,7 @@ header .header-container .input-button button:hover i {
 
 #smart-tutoring {
   background-color: #FFFF;
+  border-radius: 0 0 600px 0;
 }
 #smart-tutoring .container-section .tutoring-box {
   display: inline-block;
@@ -501,6 +520,9 @@ header .header-container .input-button button:hover i {
   border-radius: 5px;
   background-color: #FFFF;
 }
+#top-learners .row-testimonials .card-testimonial:nth-child(2n+1) {
+  opacity: 0.5;
+}
 #top-learners .row-testimonials .card-testimonial .review {
   height: 250px;
   padding-bottom: 20px;
@@ -539,6 +561,20 @@ header .header-container .input-button button:hover i {
 #top-learners .row-testimonials .slider {
   margin-top: 40px;
   text-align: center;
+}
+#top-learners .row-testimonials .slider i {
+  padding: 12px;
+  font-size: 10px;
+  color: #7e7e7e;
+  cursor: pointer;
+}
+#top-learners .row-testimonials .slider i:hover {
+  color: #3F3A64;
+  transform: scale(1.5);
+}
+#top-learners .row-testimonials .slider i:first-child {
+  color: #3F3A64;
+  transform: scale(1.5);
 }
 #top-learners .certification {
   display: flex;
