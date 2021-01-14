@@ -9,15 +9,24 @@
   outline: none;
 }
 a {
+  font-weight: 700;
   text-decoration: none;
   text-underline-position: under;
+  @include transition-change;
+  &:hover {
+    color: $colorGreen;
+  }
 }
-i, button {
-  cursor: pointer;
-}
-h1, h2, h3, h4 {
+h1, h2, h3 {
   color: $colorGun;
   font-weight: 700;
+}
+h4 {
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 10px 0;
+  font-weight: 700;
+  color: $colorGun;
 }
 // h5 title inizio section
 h5 {
@@ -32,12 +41,19 @@ p {
 span {
   color: $colorGreen;
 }
+// container 1200px
 .container-section {
   @include wrap;
 }
+// titiolo della section
 .title-section {
   @include titleSection;
 }
+// cursor
+button, li {
+  cursor: pointer;
+}
+// button
 .btn-green {
   @include btn;
   font-weight: bolder;
@@ -49,9 +65,15 @@ span {
     background-color: $colorGun;
   }
 }
+// immagine presnte nel jumbotron e smart-tutoring
 .elementor-image {
   position: absolute;
   padding-top: 50px;
+}
+// immagini di background con puntini e cerchi presenti nel jumbotron, smart-tutoring, top learners e newsletters
+.bck-box {
+  position: relative;
+  width: 20%;
 }
 .images-box-dots, .images-box-circle {
   position: absolute;
@@ -71,6 +93,7 @@ span {
     }
   }
 }
+// titolo box jumbotron e smart-tutoring
 .title-box {
   h1 {
     font-size: 48px;
@@ -79,5 +102,24 @@ span {
   p {
     font-size: 18px;
     line-height: 34px;
+  }
+}
+// input più button header-search e newsletters
+.input-button {
+  height: 50px;
+  border-radius: 3px;
+  background-color: $colorGray;
+  input {
+    height: 100%;
+    padding: 15px;
+    border: 0px;
+    border-radius: 6px 0 0 6px;
+    background-color: $colorGray;
+  }
+  button {
+    height: 100%;
+    border: 0;
+    border-radius: 0 6px 6px 0;
+    @include transition-change;
   }
 }

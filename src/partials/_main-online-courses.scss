@@ -16,7 +16,7 @@
           margin-right: 30px;
           img {
             height: 170px;
-            border-radius: 50%;
+            border-radius: $borderImg;
             cursor: pointer;
           }
         }
@@ -30,17 +30,9 @@
           }
           h4 {
             @include infoBoxH4;
-            cursor: pointer;
-            &:hover {
-              color: $colorGreen;
-              @include transition-change;
-            }
           }
           p {
-            display: inline-block;
-            padding-right: 10px;
-            font-size: 13px;
-            color: $colorText;
+            @include infoBoxP;
             i {
               cursor: context-menu;
             }

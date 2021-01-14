@@ -2,6 +2,7 @@
   background-color: $colorBeige;
   .container-section {
     @include display-flex-row;
+    padding-bottom: 90px;
     .link-blogs {
       width: 430px;
       .title-section {
@@ -12,11 +13,23 @@
         }
       }
       .blogs-list {
+        padding-right: 30px;
         ul {
           list-style: none;
           li {
+            display: flex;
+            padding: 10px 0;
+            @include transition-change;
             a {
-              font-size: 14px;
+              font-size: 15px;
+              padding-left: 5px;
+              color: $colorGun;
+            }
+            &:hover {
+              color: $colorGreen;
+            }
+            &:hover a {
+              color: $colorGreen;
             }
           }
         }
@@ -24,6 +37,42 @@
     }
     .blogs-box {
       width: calc(100% - 430px);
+      padding-top: 120px;
+      padding-left: 30px;
+      .blog-card {
+        display: inline-block;
+        width: 340px;
+        height: 430px;
+        border-radius: $borderBox5px;
+        background-color: $colorWhite;
+        .card-img {
+          img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+            cursor: pointer;
+          }
+        }
+        .info-blog {
+          padding: 20px;
+          h5 {
+            cursor: pointer;
+            &:hover {
+              color: $colorGreen;
+              @include transition-change;
+            }
+          }
+          h4 {
+            @include infoBoxH4;
+          }
+          p {
+            display: inline-block;
+            @include infoBoxP;
+          }
+        }
+        &:last-child {
+          margin-left: 60px;
+        }
+      }
     }
   }
 }

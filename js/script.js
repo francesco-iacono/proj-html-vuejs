@@ -132,15 +132,34 @@ var app = new Vue({
         postTitle: 'Brush Strokes Energize Trees in Paintings',
         postDate: 'May 15, 2020',
         postView: '688 views',
-        cover: 'artist-blog-03-480x352.jpeg'
+        cover: 'img/artist-blog-03-480x352.jpeg'
       },
       {
         category: 'ARTIST',
         postTitle: 'Pocket-Sized Notebooks Hold Minature Paintings',
         postDate: 'May 15, 2020',
         postView: '603 views',
-        cover: 'artist-blog-01-480x352.jpg'
+        cover: 'img/artist-blog-01-480x352.jpg'
       }
+    ],
+    contact: {
+      address: '382 NE 191st St # 87394 Miami, FL 33179-3899',
+      phone: '+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)',
+    },
+    email: 'support@maxcoach.com',
+    footerExplore: [
+          'Start here',
+          'Success story',
+          'Blog',
+          'Courses',
+          'About us',
+          'Contact us'
+    ],
+    footerInformation: [
+          'Membership',
+          'Purchase guide',
+          'Privacy policy',
+          'Terms of services'
     ]
   }
 })

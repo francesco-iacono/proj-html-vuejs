@@ -1,0 +1,47 @@
+#newsletters {
+  display: flex;
+  position: relative;
+  background-color: $colorWhite;
+  padding-bottom: 50px;
+  .bck-box {
+    .images-box-circle {
+      .images-background-circle-1 {
+        top: 140px;
+        right: -40px;
+        i {
+          color: $colorGreen;
+        }
+      }
+      .images-background-circle-2 {
+        top: 160px;
+        left: 0px;
+      }
+      .images-background-circle-3 {
+        top: 90px;
+        left: -140px;;
+      }
+    }
+  }
+  .title-section {
+    @include display-flex-column;
+    align-items: center;
+    width: 60%;
+    padding: 100px 150px 50px 150px;
+    .input-button {
+      width: 570px; //mod
+      margin-top: 50px;
+      input {
+        width: 450px; //mod
+      }
+      button {
+        width: calc(100% - 455px); //mod
+        background-color: $colorGreen; //mod
+        color: $colorWhite; //mod
+        font-weight: 700; //mod
+        &:hover {
+          background-color: $colorGun; //mod
+        }
+      }
+    }
+  }
+}

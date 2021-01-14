@@ -34,7 +34,7 @@
             <li><i class="far fa-user-circle"></i></li>
           </ul>
         </div>
-        <div class="header-search">
+        <div class="input-button">
           <input type="text" name="search" value="" placeholder="Search..">
           <button type="button" name="button"><i class="fas fa-search"></i></button>
         </div>
@@ -263,6 +263,7 @@
         </div>
       </section>
       <!-- /database -->
+      <!--i migliori blogs -->
       <section id="best-blogs">
         <div class="container-section">
           <div class="link-blogs">
@@ -272,23 +273,113 @@
             </div>
             <div class="blogs-list">
               <ul>
-                <li v-for="link in linkBlogs"><a href="#">
-                  <i class="fas fa-arrow-right"></i>
-                  {{ link }}
-                </a>
+                <li v-for="link in linkBlogs">
+                  <div><i class="fas fa-arrow-right"></i></div>
+                  <a href="#">{{ link }}</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="blogs-box">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div v-for="blog in blogs" class="blog-card">
+              <div class="card-img">
+                <img :src="blog.cover" alt="">
+              </div>
+              <div class="info-blog">
+                <h5>{{ blog.category }}</h5>
+                <h4>{{ blog.postTitle }}</h4>
+                <p><i class="far fa-calendar"></i> {{ blog.postDate }}</p>
+                <p><i class="far fa-eye"></i> {{ blog.postView }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /i migliori blogs -->
+      <section id="newsletters">
+        <div class="bck-box">
+          <div class="images-box-circle">
+            <div class="images-background-circle-1">
+              <i class="far fa-circle"></i>
+            </div>
+          </div>
+        </div>
+        <div class="title-section">
+          <h2>Subscribe <span>Newsletters</span></h2>
+          <p>Enter your email address to register to our newsletter subscription delivered on a regular basis!</p>
+          <div class="input-button">
+            <input type="text" name="search" value="" placeholder="Enter your email">
+            <button type="button" name="button">Subscribe</button>
+          </div>
+        </div>
+        <div class="bck-box">
+          <div class="images-box-circle">
+            <div class="images-background-circle-2">
+              <img src="img/maxcoach-shape-02.png" alt="">
+            </div>
+            <div class="images-background-circle-3">
+              <img src="img/maxcoach-shape-09.png" alt="">
+            </div>
           </div>
         </div>
       </section>
     </main>
     <!-- /main -->
     <!-- footer -->
-    <footer></footer>
+    <footer>
+      <div class="container-section">
+        <div class="contact">
+          <h3>Address</h3>
+          <div v-for="item in contact" class="">
+            {{ item }}
+          </div>
+          <div class="email"><a href="#"> {{ email }} </a></div>
+          <ul>
+          <li>
+            <a href="#">
+              <i class="fab fa-facebook-square"></i>
+             </a>
+           </li>
+            <li>
+              <a href="#">
+               <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li><a href="#">
+              <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <div class="list-box">
+            <h3>Explore</h3>
+            <ul>
+              <li v-for="element in footerExplore">
+                <a href="#">
+                {{ element }}
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="list-box">
+            <h3>Information</h3>
+            <ul>
+              <li v-for="element in footerInformation">
+                <a href="#">
+                  {{ element }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- /footer -->
   </div>
 <script src="js/script.js" charset="utf-8"></script>
