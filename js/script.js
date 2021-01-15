@@ -1,12 +1,30 @@
 var app = new Vue({
   el: '#app',
   data: {
+    linkHome: [],
     linkMenu: [
       {
         menuItem: 'Home',
         subMenu: [
           'MaxCoach Education',
-        ]
+          'Course Portal',
+          'Distant Learning',
+          'Multimedia Pedagogy',
+          'Modern Schooling',
+          'Remote Training',
+          'Health Coaching',
+          'Gym Coaching',
+          'Business',
+          'Artist',
+          'Kitchen Coach',
+          'Motivation',
+          'Dancing',
+          'Guitar',
+          'Yoga',
+          'Photography',
+          'Personal Finance'
+        ],
+        img: 'img/homepages-mega-menu-image-alt.jpg'
       },
       {
         menuItem: 'Pages',
@@ -64,7 +82,7 @@ var app = new Vue({
       },
 
     ],
-    openMenu:false,
+    indexMenu: -1,
     logos: [
       'img/client-logo-01.png',
       'img/client-logo-02.png',
@@ -161,6 +179,7 @@ var app = new Vue({
         image: 'img/testimonial-avata-04.jpg'
       }
     ],
+    indexTestimonials: 1,
     dataBase: [
       {
       title: 'Successfully trained',
@@ -225,5 +244,22 @@ var app = new Vue({
           'Privacy policy',
           'Terms of services'
     ]
+  },
+  methods: {
+    goToLink: function (newIndex) {
+      var self = this;
+      setTimeout( () => {
+        self.indexMenu = newIndex;
+      }, 800)
+    },
+    mouseleave: function () {
+      var self = this;
+      setTimeout( () => {
+        self.indexMenu = -1;
+      }, 800)
+    },
+    showTestimonial: function (newIndex) {
+      this.indexTestimonials = newIndex;
+    }
   }
 })

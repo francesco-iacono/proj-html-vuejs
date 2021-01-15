@@ -2,6 +2,9 @@
   background-color: $colorGray;
   padding: 10px 40px 30px 40px;
   .row-testimonials{
+    .card-opacity {
+      opacity: 0.5;
+    }
     .card-testimonial {
       display: inline-block;
       width: calc(100% / 3 - 50px);
@@ -9,9 +12,6 @@
       margin: 0 25px;
       border-radius: $borderBox5px;
       background-color: $colorWhite;
-      &:nth-child(2n+1) {
-        opacity: 0.5;
-      }
       .review {
         height: 250px;
         padding-bottom: 20px;
@@ -56,7 +56,7 @@
           color: $colorGun;
           transform: scale(1.5);
         }
-        &:first-child {
+        &.active-slider {
           color: $colorGun;
           transform: scale(1.5);
         }

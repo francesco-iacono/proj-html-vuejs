@@ -25,16 +25,21 @@
         </div>
         <div id="menu-nav">
           <ul>
-            <li v-for="item in linkMenu">
+            <li v-for="(item, index) in linkMenu"
+            v-on:mouseover="goToLink(index)"
+            v-on:mouseleave="mouseleave">
               <a href="#">
                 {{ item.menuItem }}
                 <i class="fas fa-chevron-down"></i>
               </a>
-              <ul>
+              <ul :class="(index == indexMenu) ? 'active' : 'hidden'">
                 <li v-for="element in item.subMenu">
                   <a href="#">
                     {{ element }}
                   </a>
+                </li>
+                <li v-if="item.img != null">
+                  <img :src="item.img" alt="">
                 </li>
               </ul>
             </li>
@@ -210,7 +215,8 @@
           <h2>Our <span>top learners'</span> verbatim</h2>
         </div>
         <div class="row-testimonials">
-          <div v-for="testimonial in testimonials" class="card-testimonial">
+          <div v-for="(testimonial, index) in testimonials" class="card-testimonial"
+          :class="(index == indexTestimonials) ? '' : 'card-opacity'">
             <div class="review">
               <h4>{{ testimonial.title }}</h4>
               <p>{{ testimonial.review }}</p>
@@ -226,7 +232,11 @@
             </div>
           </div>
           <div class="slider">
-            <i v-for="n in testimonials" class="fas fa-circle"></i>
+            <i v-for="(testimonial, index) in testimonials"
+              :class="(index == indexTestimonials) ? 'active-slider' : ''"
+             class="fas fa-circle"
+               @click="showTestimonial(index)"
+             ></i>
           </div>
         </div>
         <div class="certification">
@@ -385,6 +395,9 @@
             </ul>
           </div>
         </div>
+      </div>
+      <div class="copywriter">
+        <p>© 2020 Maxcoach. All Rights Reserved</p>
       </div>
     </footer>
     <!-- /footer -->

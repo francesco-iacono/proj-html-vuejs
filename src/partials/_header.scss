@@ -37,16 +37,35 @@ header {
               text-decoration: underline;
             }
           }
+          &:first-child ul {
+            flex-wrap: wrap;
+            width: 1200px;
+            height: 460px;
+            left: -266px;
+            li {
+              a {
+                &:hover {
+                  color: $colorGreen;
+                }
+              }
+            }
+          }
           ul {
-            // @include display-flex-column;
-            display: none;
             position: absolute;
             width: 240px;
+            padding: 20px 0;
             background-color: $colorWhite;
+            border-bottom: 5px solid $colorGreen;
+            box-shadow: 0 4px 9px 0px  rgba(0, 0, 0, 0.3);
             li {
+              padding: 8px 30px;
               line-height: 30px;
               a {
                 color: $colorText;
+                &:hover {
+                  color: $colorGun;
+                  text-decoration: none;
+                }
               }
             }
           }

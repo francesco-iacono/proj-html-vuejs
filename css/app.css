@@ -57,6 +57,15 @@ span {
   margin: auto;
 }
 
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
 .title-section {
   padding: 100px 0 50px 0;
   text-align: center;
@@ -212,17 +221,33 @@ header .header-container #menu-nav ul li a i {
 header .header-container #menu-nav ul li a:hover {
   text-decoration: underline;
 }
+header .header-container #menu-nav ul li:first-child ul {
+  flex-wrap: wrap;
+  width: 1200px;
+  height: 460px;
+  left: -266px;
+}
+header .header-container #menu-nav ul li:first-child ul li a:hover {
+  color: #20ad97;
+}
 header .header-container #menu-nav ul li ul {
-  display: none;
   position: absolute;
   width: 240px;
+  padding: 20px 0;
   background-color: #FFFF;
+  border-bottom: 5px solid #20ad97;
+  box-shadow: 0 4px 9px 0px rgba(0, 0, 0, 0.3);
 }
 header .header-container #menu-nav ul li ul li {
+  padding: 8px 30px;
   line-height: 30px;
 }
 header .header-container #menu-nav ul li ul li a {
   color: #696969;
+}
+header .header-container #menu-nav ul li ul li a:hover {
+  color: #3F3A64;
+  text-decoration: none;
 }
 header .header-container .input-button {
   width: 230px;
@@ -512,6 +537,9 @@ header .header-container .input-button button:hover i {
   background-color: #F8F8F8;
   padding: 10px 40px 30px 40px;
 }
+#top-learners .row-testimonials .card-opacity {
+  opacity: 0.5;
+}
 #top-learners .row-testimonials .card-testimonial {
   display: inline-block;
   width: calc(100% / 3 - 50px);
@@ -519,9 +547,6 @@ header .header-container .input-button button:hover i {
   margin: 0 25px;
   border-radius: 5px;
   background-color: #FFFF;
-}
-#top-learners .row-testimonials .card-testimonial:nth-child(2n+1) {
-  opacity: 0.5;
 }
 #top-learners .row-testimonials .card-testimonial .review {
   height: 250px;
@@ -572,7 +597,7 @@ header .header-container .input-button button:hover i {
   color: #3F3A64;
   transform: scale(1.5);
 }
-#top-learners .row-testimonials .slider i:first-child {
+#top-learners .row-testimonials .slider i.active-slider {
   color: #3F3A64;
   transform: scale(1.5);
 }
@@ -767,8 +792,8 @@ header .header-container .input-button button:hover i {
 }
 
 footer {
-  display: flex;
   height: 400px;
+  padding: 70px;
   background-color: #F8F8F8;
 }
 footer .container-section {
@@ -835,4 +860,9 @@ footer .container-section .footer-list .list-box:first-child ul {
   flex-wrap: wrap;
   height: 120px;
   padding-right: 150px;
+}
+footer .copywriter {
+  text-align: center;
+  padding-top: 60px;
+  font-size: 14px;
 }

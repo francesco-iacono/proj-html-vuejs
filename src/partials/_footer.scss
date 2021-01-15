@@ -1,6 +1,6 @@
 footer {
-  display: flex;
   height: 400px;
+  padding: 70px;
   background-color: $colorGray;
   .container-section {
     display: flex;
@@ -55,5 +55,10 @@ footer {
         }
       }
     }
+  }
+  .copywriter {
+    text-align: center;
+    padding-top: 60px;
+    font-size: 14px;
   }
 }

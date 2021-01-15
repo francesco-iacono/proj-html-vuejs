@@ -48,6 +48,12 @@ span {
 .container-section {
   @include wrap;
 }
+.active {
+  @include display-flex-column;
+}
+.hidden {
+  display: none;
+}
 // titiolo della section
 .title-section {
   @include titleSection;
